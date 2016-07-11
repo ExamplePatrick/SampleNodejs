@@ -6,5 +6,9 @@ gulp.task('hello', function(){
 	return console.log('Hello World!');
 });
 
+gulp.task('world',['hello'], function(){
+	return console.log('World!');
+});
+
 // gulp를 실행하면 default로 hello task 실행
-gulp.task('default',['hello']);
+gulp.task('default',['world']);
