@@ -8,5 +8,10 @@ gulp.task('uglify', function(){
 	.pipe(gulp.dest('dist')); // dist 폴더에 저장
 });
 
+// 파일 변경 감지
+gulp.task('watch', function(){
+	gulp.watch('src/*.js', ['uglify']);
+});
+
 // gulp를 실행하면 default로 uglify task를 실행
-gulp.task('default',['uglify']);
+gulp.task('default',['uglify', 'watch']);
