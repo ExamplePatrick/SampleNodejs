@@ -5,3 +5,6 @@ var gulp = require('gulp');
 gulp.task('hello', function(){
 	return console.log('Hello World!');
 });
+
+// gulp를 실행하면 default로 hello task 실행
+gulp.task('default',['hello']);
